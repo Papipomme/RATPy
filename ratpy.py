@@ -82,11 +82,11 @@ print( get_stop_name("39532") )
 for line in lines:
     print(get_line_name(line), get_transport_mode(line))
 
-#def get_next(line_id, stop_id):
-#    url = BASE_URL + "?MonitoringRef=STIF:StopPoint:Q:" + stop_id + ":" + "&LineRef=STIF:Line::" + line_id + ":"
-#
-#    req = requests.get(url, headers=REQUEST_HEADERS)
-#    print('Status', req)
-#    print(req.content)
-#
-#get_next("C01141", "7789")
+def get_next(line_id, stop_id):
+    url = BASE_URL + "?MonitoringRef=STIF:StopPoint:Q:" + stop_id + ":" + "&LineRef=STIF:Line::" + line_id + ":"
+
+    req = requests.get(url, headers=REQUEST_HEADERS)
+    print('Status', req)
+    print(req.content)
+
+get_next("C01141", "7789")
